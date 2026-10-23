@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mert | Yapay zeka destekli yazılım geliştirici portfolyosu" />
-  <title>Mert | Portfolyo</title>
+  <meta name="description" content="Launafix | Yapay zeka destekli yazılım ve dijital çözümler" />
+  <title>Launafix | Portfolyo</title>
   <style>
     :root {
       --bg: #060913;
@@ -106,6 +106,29 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      background-size: 180% 180%;
+      animation: logoShimmer 5s ease-in-out infinite, logoGlow 3s ease-in-out infinite alternate;
+      transform-origin: left center;
+      transition: transform 0.25s ease, filter 0.25s ease;
+    }
+
+    .brand:hover {
+      transform: translateY(-1px) scale(1.025);
+      filter: drop-shadow(0 0 12px rgba(96,165,250,0.45));
+    }
+
+    @keyframes logoShimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes logoGlow {
+      from { filter: drop-shadow(0 0 0 rgba(96,165,250,0)); }
+      to { filter: drop-shadow(0 0 8px rgba(139,92,246,0.24)); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .brand { animation: none; transition: none; }
     }
 
     .nav-links {
@@ -662,7 +685,7 @@
 
   <header>
     <div class="container nav">
-      <div class="brand">MERT.DEV</div>
+      <div class="brand">LAUNAFIX</div>
       <nav class="nav-links">
         <a href="#about">Hakkımda</a>
         <a href="#skills">Yetenekler</a>
@@ -682,8 +705,7 @@
             Yapay zekâ destekli <span class="gradient-text">modern çözümler</span> üretiyorum.
           </h1>
           <p class="lead">
-            Merhaba, ben Mert. Node.js ve Python ile gelişen web uygulamaları, otomasyon botları
-            ve akıllı ürünler geliştiriyorum. Kullanıcı dostu arayüzler ve temiz, sürdürülebilir kod üretmeyi seviyorum.
+            LaunaFix, işletmeler ve bireyler için modern web çözümleri, akıllı otomasyon sistemleri ve dijital ürünler geliştirir. Kullanıcı odaklı tasarım, yenilikçi teknolojiler ve sürdürülebilir çözümlerle dijital dünyada fark yaratmayı hedefliyoruz.
           </p>
 
           <div class="hero-actions">
@@ -693,7 +715,7 @@
 
           <div class="mini-stats">
             <div class="mini-stat">
-              <strong>3+</strong>
+              <strong>1+</strong>
               <span>Yıl deneyim</span>
             </div>
             <div class="mini-stat">
@@ -853,17 +875,17 @@
           <div class="contact-info">
             <div class="contact-item">
               <strong>E-posta</strong>
-              <a href="mailto:merthesap@gmail.com">merthesap@gmail.com</a>
+              <a href="mailto:launafix@gmail.com">launafix@gmail.com</a>
             </div>
 
             <div class="contact-item">
               <strong>WhatsApp</strong>
-              <a href="https://wa.me/905555555555" target="_blank" rel="noopener">+90 555 555 55 55</a>
+              <a href="https://wa.me/905412652712" target="_blank" rel="noopener">0541 265 27 12</a>
             </div>
 
             <div class="contact-item">
               <strong>Konum</strong>
-              <span>Türkiye</span>
+              <span>Adana/Türkiye</span>
             </div>
           </div>
 
@@ -887,7 +909,7 @@
   </main>
 
   <footer>
-    © 2026 Mert. Tüm hakları saklıdır.
+    © 2026 Launafix. Tüm hakları saklıdır.
   </footer>
 
   <script>
@@ -969,7 +991,7 @@
       const subject = form.subject.value.trim();
       const message = form.message.value.trim();
 
-      const mailto = `mailto:merthesap@gmail.com?subject=${encodeURIComponent(subject || "İletişim Mesajı")}&body=${encodeURIComponent(
+      const mailto = `mailto:launafix@gmail.com?subject=${encodeURIComponent(subject || "İletişim Mesajı")}&body=${encodeURIComponent(
         `Ad Soyad: ${name}\nE-posta: ${email}\n\nMesaj:\n${message}`
       )}`;
 
